@@ -1,0 +1,6 @@
+---
+
+- hosts: keepalived-cluster
+  become: yes
+  roles:
+    - { role: keepalived, tags: keepalived }

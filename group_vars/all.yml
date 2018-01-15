@@ -1,0 +1,10 @@
+---
+
+bind_vip_address: "172.16.35.9"
+bind_interface: "eth1" # {{ ansible_default_ipv4.interface }}
+
+# keepalived options
+keepalived_check_ip: any
+keepalived_check_port: 22
+keepalived_check_vid: 53
+keepalived_check_vmask: 24

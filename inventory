@@ -1,0 +1,9 @@
+[keepalived-masters]
+172.16.35.10 ansible_user=vagrant ansible_password=vagrant
+
+[keepalived-nodes]
+172.16.35.[11:12] ansible_user=vagrant ansible_password=vagrant
+
+[keepalived-cluster:children]
+keepalived-masters
+keepalived-nodes
