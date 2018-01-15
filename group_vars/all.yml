@@ -8,3 +8,8 @@ keepalived_check_ip: any
 keepalived_check_port: 22
 keepalived_check_vid: 53
 keepalived_check_vmask: 24
+
+# Add http and https proxy
+proxy_env:
+  http_proxy: "" # http://:<usr>@<passwd>:<ip>:<port>
+  https_proxy: "" # https://<usr>:<passwd>@<ip>:<port>

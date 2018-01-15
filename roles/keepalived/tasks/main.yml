@@ -8,12 +8,14 @@
 
 - name: Install keepalived (RHEL/CentOS)
   when: ansible_os_family == "RedHat"
+  environment: "{{ proxy_env }}"
   yum:
     name: keepalived
     state: latest
 
 - name: Install keepalived (Debian/Ubuntu)
   when: ansible_os_family == "Debian"
+  environment: "{{ proxy_env }}"
   apt:
     name: keepalived
     state: latest
